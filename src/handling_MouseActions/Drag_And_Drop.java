@@ -23,8 +23,21 @@ public class Drag_And_Drop {
 		
 		WebElement dragAndDrop = driver.findElement(By.xpath("//a[text()='Drag and Drop ']"));
 		a.moveToElement(dragAndDrop).pause(2000).perform();
+		
+		WebElement staticLink = driver.findElement(By.xpath("//a[text()='Static ']"));
+		a.click(staticLink).pause(2000).perform();
+		
+		WebElement source1 = driver.findElement(By.xpath("//img[@id='angular']"));
+		WebElement target = driver.findElement(By.xpath("//div[@id='droparea']"));
+		WebElement source2 = driver.findElement(By.xpath("//img[@id='node']"));
+		
+		a.dragAndDrop(source1, target).pause(2000).perform();
+		a.clickAndHold(source2).moveToElement(target).release().build().perform();
+		
+		driver.quit();
+		
 
-
+        
 	}
 
 }

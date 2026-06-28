@@ -24,6 +24,7 @@ public class Handling_RightClick {
 		WebElement yes = driver.findElement(By.xpath("//*[text()='yes']"));
 		a.click(yes).pause(2000).perform();
 
+		driver.quit();
 	}
 
 }

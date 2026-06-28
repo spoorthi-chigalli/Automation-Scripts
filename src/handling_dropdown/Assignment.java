@@ -11,10 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 public class Assignment {
 
 	public static void main(String[] args) throws InterruptedException {
-		
-		
-//--------------------------------------Assignment---------------------------------------------------------------------
-		
+
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
